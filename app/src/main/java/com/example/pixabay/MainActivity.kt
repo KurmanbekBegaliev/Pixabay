@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     call: Call<PixabayModel>,
                     response: Response<PixabayModel>
                 ) {
-                    adapter.addList(page, response.body()!!.hits)
+                    response.body()?.let { adapter.addList(page, it.hits) }
                 }
 
                 override fun onFailure(call: Call<PixabayModel>, t: Throwable) {
