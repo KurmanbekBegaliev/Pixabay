@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface PixabayApi {
-
     @GET("api/")
     fun getImage(
         @Query("key") key: String = "34060888-611f2c6c3ce4aa18e3c8c17b5",
